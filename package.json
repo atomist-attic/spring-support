@@ -1,0 +1,39 @@
+{
+  "name": "@atomist/spring-support",
+  "version": "0.1.0",
+  "description": "Spring support",
+  "dependencies": {
+    "@atomist/rugs": "1.0.0-m.3",
+    "mustache": "^2.3.0"
+  },
+  "scripts": {
+    "test": "tsc -p . && mocha test --recursive",
+    "dev-test-watch": "mocha-typescript-watch",
+    "prepublish": "tslint '**/*.ts' --exclude 'node_modules/**' && tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomist/spring-support.git"
+  },
+  "keywords": [
+    "Atomist",
+    "Rug"
+  ],
+  "author": "Atomist, Inc",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/atomist/spring-support/issues"
+  },
+  "homepage": "https://github.com/atomist/rugs#readme",
+  "devDependencies": {
+    "@types/chai": "^3.5.1",
+    "@types/mocha": "^2.2.41",
+    "@types/mustache": "^0.8.29",
+    "chai": "^3.5.0",
+    "mocha": "^3.3.0",
+    "mocha-typescript": "^1.1.2",
+    "source-map-support": "^0.4.15",
+    "tslint": "^5.1.0",
+    "typescript": "^2.2.2"
+  }
+}
