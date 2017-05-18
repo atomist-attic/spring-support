@@ -46,8 +46,8 @@ export class ClassBuilder implements TypeBuilder {
     public content(): string {
         let s = `${this.visibility} class ${this.name} {\n`;
         s += "\n";
-        s += this.members.filter(m => m instanceof Field).map(f => f.content).join("\n");
-        s += this.members.filter(m => m instanceof Method).map(f => f.content).join("\n");
+        s += this.members.filter((m) => m instanceof Field).map((f) => f.content).join("\n");
+        s += this.members.filter((m) => m instanceof Method).map((f) => f.content).join("\n");
         s += "}";
         return s;
     }
@@ -83,7 +83,10 @@ export class Field implements Member {
 
 export class Method implements Member {
 
-    constructor(public name: string, public type: string, public body: string = "", public visibility: Visibility = "public") {}
+    constructor(public name: string,
+                public type: string,
+                public body: string = "",
+                public visibility: Visibility = "public") {}
 
     public content(): string {
         return `${this.visibility} ${this.type} ${this.name}() {\n${this.body}\n}`;
